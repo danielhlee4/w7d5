@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :subs, except: [:destroy]
+  resources :posts, except: [:index, :destroy]
 end
